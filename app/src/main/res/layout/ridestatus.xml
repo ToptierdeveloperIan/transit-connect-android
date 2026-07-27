@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- TITLE -->
+        <TextView
+            android:id="@+id/titleRideStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ride Status"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/blue_primary"
+            android:paddingBottom="12dp" />
+
+        <!-- STATUS BADGE -->
+        <TextView
+            android:id="@+id/statusBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confirmed"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:padding="10dp"
+            android:textSize="14sp"
+            android:layout_marginBottom="18dp"
+            android:elevation="6dp" />
+
+        <!-- RIDE STATUS INPUT -->
+        <EditText
+            android:id="@+id/rideStatusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ride Status (Pending, Confirmed, En Route)"
+            android:padding="14dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/blue_primary"
+            android:background="@drawable/edittext_outline_blue"
+            android:layout_marginBottom="22dp"
+            android:inputType="text" />
+
+        <!-- DRIVER CARD -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardElevation="3dp"
+            app:cardCornerRadius="16dp"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardUseCompatPadding="true"
+            android:backgroundTint="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Driver"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:textColor="@color/blue_primary" />
+
+                <TextView
+                    android:id="@+id/driverName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="John Doe"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:paddingTop="6dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- VEHICLE CARD -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardElevation="3dp"
+            app:cardCornerRadius="16dp"
+            android:backgroundTint="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vehicle"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:textColor="@color/blue_primary" />
+
+                <TextView
+                    android:id="@+id/vehicleDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="KDA 123A - Toyota Hiace"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:paddingTop="6dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- PICKUP & ETA CARD -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardElevation="3dp"
+            app:cardCornerRadius="16dp"
+            android:backgroundTint="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pickup Time"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:textColor="@color/blue_primary" />
+
+                <TextView
+                    android:id="@+id/pickupTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Today • 8:30 AM"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:paddingTop="6dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Estimated Arrival"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:textColor="@color/blue_primary"
+                    android:paddingTop="14dp" />
+
+                <TextView
+                    android:id="@+id/eta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Arrives in 12 min"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:paddingTop="6dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- PICKUP LOCATION CARD -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardElevation="3dp"
+            app:cardCornerRadius="16dp"
+            android:backgroundTint="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pickup Location"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:textColor="@color/blue_primary" />
+
+                <TextView
+                    android:id="@+id/pickupLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Imani Estate, Gate C"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:paddingTop="6dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- DROPOFF LOCATION -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dropoff Location"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:textColor="@color/blue_primary"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp" />
+
+        <TextView
+            android:id="@+id/dropoffLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Imani Estate, Gate C"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:paddingBottom="22dp" />
+
+        <!-- PAYMENT DETAILS CARD -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="3dp"
+            android:backgroundTint="@color/white"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Payment Method"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:textColor="@color/blue_primary" />
+
+                <TextView
+                    android:id="@+id/paymentMethod"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="M-Pesa"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:paddingTop="6dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Payment Status"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:textColor="@color/blue_primary"
+                    android:paddingTop="14dp" />
+
+                <TextView
+                    android:id="@+id/paymentStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pending"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:paddingTop="6dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- DRIVER RATING CARD -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="3dp"
+            android:backgroundTint="@color/white"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Driver rating"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:textColor="@color/blue_primary"
+                    android:paddingBottom="6dp" />
+
+                <TextView
+                    android:id="@+id/Driverrating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pending"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:paddingTop="6dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

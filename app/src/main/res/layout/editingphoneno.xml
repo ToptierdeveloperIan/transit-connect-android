@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Back Arrow -->
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@drawable/arrow_left_alt_24px" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Update Phone Number"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="5dp"
+            android:paddingBottom="15dp" />
+
+        <!-- Phone Number -->
+        <EditText
+            android:id="@+id/editPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter new phone number"
+            android:inputType="phone"
+            android:backgroundTint="@color/blue_primary"
+            android:layout_marginBottom="15dp" />
+
+        <!-- Confirm Button -->
+        <Button
+            android:id="@+id/btnConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Confirm"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/blue_primary"
+            android:padding="10dp" />
+
+        <!-- OTP Field (Hidden initially) -->
+        <EditText
+            android:id="@+id/editOTP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter OTP"
+            android:inputType="number"
+            android:backgroundTint="@color/blue_primary"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"/>
+
+        <!-- Verify OTP Button (Hidden initially) -->
+        <Button
+            android:id="@+id/btnVerifyOTP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Verify OTP"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/blue_primary"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/paymentUiCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:strokeColor="#E5E7EB"
+        app:strokeWidth="1dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/scooterImage"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:contentDescription="Scooter image"
+                android:src="@drawable/ic_scooter_placeholder"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/scooterIdLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N&#176; 01030"
+                android:textColor="#6B7280"
+                android:textSize="12sp"
+                app:layout_constraintTop_toTopOf="@id/scooterImage"
+                app:layout_constraintStart_toEndOf="@id/scooterImage"
+                android:layout_marginStart="12dp" />
+
+            <ImageView
+                android:id="@+id/batteryIcon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:contentDescription="Battery icon"
+                android:src="@drawable/ic_battery_dummy"
+                app:layout_constraintTop_toBottomOf="@id/scooterIdLabel"
+                app:layout_constraintStart_toStartOf="@id/scooterIdLabel"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/rangeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="40 km"
+                android:textColor="#111827"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="@id/batteryIcon"
+                app:layout_constraintBottom_toBottomOf="@id/batteryIcon"
+                app:layout_constraintStart_toEndOf="@id/batteryIcon"
+                android:layout_marginStart="8dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/startRideButton"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:text="Start the ride"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                app:backgroundTint="#2ECC71"
+                app:cornerRadius="16dp"
+                app:layout_constraintTop_toBottomOf="@id/scooterImage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/paymentMethodRow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                app:layout_constraintTop_toBottomOf="@id/startRideButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <ImageView
+                    android:id="@+id/paymentIcon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:contentDescription="Payment icon"
+                    android:src="@drawable/ic_clock_payment_dummy"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/paymentMethodText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Payment method *3334"
+                    android:textColor="#4B5563"
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/paymentIcon"
+                    app:layout_constraintEnd_toStartOf="@id/paymentChevron" />
+
+                <ImageView
+                    android:id="@+id/paymentChevron"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:contentDescription="Chevron right"
+                    android:src="@drawable/ic_chevron_right_dummy"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/dividerOne"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:background="#F1F5F9"
+                app:layout_constraintTop_toBottomOf="@id/paymentMethodRow"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/pricingRow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                app:layout_constraintTop_toBottomOf="@id/dividerOne"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <TextView
+                    android:id="@+id/pricingText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Pricing 0.90 &#8364; + 0.09 &#8364;/min"
+                    android:textColor="#4B5563"
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/pricingChevron" />
+
+                <ImageView
+                    android:id="@+id/pricingChevron"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:contentDescription="Chevron right"
+                    android:src="@drawable/ic_chevron_right_dummy"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

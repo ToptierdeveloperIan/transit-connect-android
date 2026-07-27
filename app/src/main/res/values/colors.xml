@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+        <!-- Brand colors -->
+        <color name="blue_primary">#0D47A1</color> <!-- Deep blue -->
+        <color name="blue_light">#5472d3</color>   <!-- Lighter ripple blue -->
+    <color name="green">#4CAF50</color>   <!-- Material Green 500 -->
+    <color name="red">#F44336</color>     <!-- Material Red 500 -->
+    <color name="yellow">#FFEB3B</color>  <!-- Material Yellow 400 -->
+
+    <color name="gray">#9E9E9E</color>
+    <color name="line_gray">#E0E0E0</color>
+
+
+</resources>

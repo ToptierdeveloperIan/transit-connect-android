@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@+id/SplashScreen">
+
+    <fragment
+        android:id="@+id/SplashScreen"
+        android:name="com.example.imanicommunityapp.SplashFragment"
+        android:label="SplashScreen"
+        tools:layout="@layout/splashfragment">
+        <action android:id="@+id/action_splashFragment_to_driverHomeFragment"
+            app:destination="@id/driverhomeFragment"/>
+        <action android:id="@+id/action_splashFragment_to_HomeFragment"
+            app:destination="@id/homeFragment"/>
+        <action android:id="@+id/action_splashFragment_to_VerificationFragment"
+            app:destination="@+id/verification"/>
+        <action
+            android:id="@+id/action_splashFragment_to_terms"
+            app:destination="@id/Terms_conditions"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/verification"
+        android:name="com.example.imanicommunityapp.auth.View.VerificationFragment"
+        android:label="verification"
+        tools:layout="@layout/verification_fragment">
+
+        <action android:id="@+id/action_verificationFragment_to_homeFragment"
+            app:destination="@id/homeFragment"/>
+        <action android:id="@+id/action_verificationFragment_to_driverhomeFragment"
+            app:destination="@id/driverhomeFragment"/>
+        <action
+            android:id="@+id/action_verificationFragment_to_terms"
+            app:destination="@id/Terms_conditions"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/selectStopFragment"
+        android:name="com.example.imanicommunityapp.bookingSys.SelectStop"
+        android:label="Select Stop"
+        tools:layout="@layout/selectstop">
+
+        <action
+            android:id="@+id/action_selectStop_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/driverhomeFragment"
+        android:name="com.example.imanicommunityapp.bookingSys.LocationSystem.driverHomeFragment"
+        android:label="signup"
+        tools:layout="@layout/driverhomefragment" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/editingnames"
+        android:name="com.example.imanicommunityapp.supportProfile.editingNameFragment"
+        android:label="signup"
+        tools:layout="@layout/editingnames" >
+    </fragment>
+    <fragment
+        android:id="@+id/editingPhoneNumber"
+        android:name="com.example.imanicommunityapp.supportProfile.ChangePhoneFragment"
+        android:label="signup"
+        tools:layout="@layout/editingphonenumber" >
+    </fragment>
+    <fragment
+        android:id="@+id/editingemails"
+        android:name="com.example.imanicommunityapp.supportProfile.editingEmail"
+        android:label="signup"
+        tools:layout="@layout/editingemails" >
+    </fragment>
+    <fragment
+        android:id="@+id/Notifications"
+        android:name="com.example.imanicommunityapp.Notifications"
+        android:label="signup"
+        tools:layout="@layout/notifications" >
+    </fragment>
+    <fragment
+        android:id="@+id/Terms_conditions"
+        android:name="com.example.imanicommunityapp.ui.terms.TermsComposeFragment"
+        android:label="Terms of Service">
+        <argument
+            android:name="requireAccept"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <action
+            android:id="@+id/action_terms_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/SplashScreen"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_terms_to_driverhomeFragment"
+            app:destination="@id/driverhomeFragment"
+            app:popUpTo="@id/SplashScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Privacy_policy"
+        android:name="com.example.imanicommunityapp.supportProfile.PrivacyPolicy"
+        android:label="signup"
+        tools:layout="@layout/privacy_policy" >
+    </fragment>
+    <fragment
+        android:id="@+id/help_support"
+        android:name="com.example.imanicommunityapp.supportProfile.HelpSupport"
+        android:label="signup"
+        tools:layout="@layout/help_support" >
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.imanicommunityapp.supportProfile.SettingsFragment"
+        android:label="verification"
+        tools:layout="@layout/fragment_settings" >
+        <!-- Profile Navigation -->
+        <action
+            android:id="@+id/action_settingsFragment_to_ChangeName"
+            app:destination="@id/editingnames"/>
+        <action
+            android:id="@+id/action_settingsFragment_to_changeEmail"
+            app:destination="@id/editingemails"/>
+        <action
+            android:id="@+id/action_settingsFragment_to_changePhoneNumber"
+            app:destination="@id/editingPhoneNumber"/>
+        <!-- Support and legal Section -->
+        <action
+            android:id="@+id/action_settingsFragment_to_Notifications"
+            app:destination="@id/Notifications"/>
+        <action
+            android:id="@+id/action_settingsFragment_to_help_support"
+            app:destination="@id/Help_support"/>
+        <action
+            android:id="@+id/action_settingsFragment_to_Terms_Conditions"
+            app:destination="@id/Terms_conditions"/>
+        <action
+            android:id="@+id/action_settingsFragment_to_Privacy_policy"
+            app:destination="@id/Privacy_policy"/>
+        <!-- Settings → Jetpack Compose Wallet (backend /api/wallet/) -->
+        <action
+            android:id="@+id/action_settingsFragment_to_wallet"
+            app:destination="@id/walletFragment"/>
+
+    </fragment>
+
+    <!-- Compose Wallet UI (Settings only). Not the drawer payment dialog @id/wallet. -->
+    <fragment
+        android:id="@+id/walletFragment"
+        android:name="com.example.imanicommunityapp.ui.wallet.WalletComposeFragment"
+        android:label="Wallet" />
+
+    <fragment
+        android:id="@+id/splashscreen_action1"
+        android:name="com.example.imanicommunityapp.SignupFragment"
+        android:label="signup"
+        tools:layout="@layout/signup" >
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/verification"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/splashscreen_action2"
+        android:name="com.example.imanicommunityapp.SignupFragment"
+        android:label="signup"
+        tools:layout="@layout/signup" >
+        <action
+            android:id="@+id/action_splashFragment_to_driverHomeFragment"
+            app:destination="@id/homeFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/splashscreen_action3"
+        android:name="com.example.imanicommunityapp.SignupFragment"
+        android:label="signup"
+        tools:layout="@layout/signup" >
+        <action
+            android:id="@+id/action_splashFragment_to_riderHomeFragment"
+            app:destination="@id/homeFragment"/>
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.imanicommunityapp.bookingSys.BookingSystem.Home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_selectStopFragment"
+            app:destination="@id/selectStopFragment"
+            tools:layout="@layout/selectstop" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Ridestatus"
+        android:name="com.example.imanicommunityapp.bookingSys.RideStatusFragment"
+        tools:layout="@layout/ridestatus">
+
+    </fragment>
+
+    <dialog
+        android:id="@+id/wallet"
+        android:name="com.example.imanicommunityapp.paymentsystem.PaymentFragment"
+        android:label="Wallet"
+        tools:layout="@layout/fragment_payment_ui">
+        <argument
+            android:name="booking_id"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <argument
+            android:name="amount"
+            app:argType="float"
+            android:defaultValue="0" />
+    </dialog>
+
+
+</navigation>

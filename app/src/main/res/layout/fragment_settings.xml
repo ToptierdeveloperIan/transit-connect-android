@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Profile Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/profile_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingVertical="24dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/personicon"
+                    android:background="@drawable/circle_background"
+                    android:padding="16dp" />
+
+                <TextView
+                    android:id="@+id/username_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ian Nbo"
+                    android:textColor="@color/blue_primary"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_marginTop="8dp" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Settings Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:textColor="@color/blue_primary"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_gray"
+            android:layout_marginBottom="8dp" />
+
+        <include android:id="@+id/ChangeName"
+            layout="@layout/settingsitems" />
+        <View style="@style/DividerLine" />
+        <include android:id="@+id/ChangePhoneNo"
+            layout="@layout/settingsitems" />
+        <View style="@style/DividerLine" />
+        <include android:id="@+id/ChangeEmail"
+            layout="@layout/settingsitems" />
+        <View style="@style/DividerLine" />
+        <!-- Wallet: Compose screen → /api/wallet/ (see docs/WALLET_ANDROID.md) -->
+        <include android:id="@+id/Wallet"
+            layout="@layout/settingsitems" />
+
+        <!-- Saved Places Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Support and Legal Section"
+            android:textColor="@color/blue_primary"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_gray"
+            android:layout_marginBottom="8dp" />
+
+        <include android:id="@+id/Notifications" layout="@layout/settingsitems" />
+        <View style="@style/DividerLine" />
+        <include android:id="@+id/Help_support" layout="@layout/settingsitems" />
+        <View style="@style/DividerLine" />
+        <include android:id="@+id/Terms_conditions" layout="@layout/settingsitems" />
+        <View style="@style/DividerLine" />
+        <include android:id="@+id/Privacy_policy" layout="@layout/settingsitems" />
+        <View style="@style/DividerLine" />
+        <include android:id="@+id/logout" layout="@layout/settingsitems" />
+
+
+
+    </LinearLayout>
+</ScrollView>

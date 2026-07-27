@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/Earnings"
+        android:title="Earnings"
+        android:icon="@android:drawable/ic_menu_manage"/>
+    <item
+        android:id="@+id/Ridestatus"
+        android:title="Ride Status"
+        android:icon="@android:drawable/ic_menu_manage"/>
+    <item
+        android:id="@+id/InviteandEarn"
+        android:title="Invite and Earn"
+        android:icon="@android:drawable/ic_menu_manage"/>
+    <item
+        android:id="@+id/Ridehistory"
+        android:title="Ride History"
+        android:icon="@android:drawable/ic_menu_manage"/>
+
+
+    <!-- Add more items as needed -->
+</menu>

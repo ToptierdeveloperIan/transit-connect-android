@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme -->
+    <style name="Base.Theme.Imanicommunityapp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light/dark theme here -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <!-- Optional: separate light theme if you want -->
+    <style name="AppTheme" parent="Theme.Material3.Light.NoActionBar">
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <!-- Actual app theme extending the base -->
+    <style name="Theme.Imanicommunityapp" parent="Base.Theme.Imanicommunityapp" />
+</resources>
